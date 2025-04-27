@@ -16,6 +16,7 @@ Busquei aplicar boas práticas de desenvolvimento, componentização, gestão de
 - **Bibliotecas:**
   - **Pinia** (Gerenciamento de estado)
   - **vee-validate** e **YUP** (Validação de formulários)
+  - **vue3-notification** (Toast de notificações)
 
 ---
 
