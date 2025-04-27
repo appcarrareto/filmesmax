@@ -58,24 +58,28 @@ Busquei aplicar boas práticas de desenvolvimento, componentização, gestão de
 Clone o repositório:
 
 ````bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/appcarrareto/filmesmax.git
+```
 
 
 Instale as dependências:
 
 ```bash
 npm install
+```
 
 Execute o projeto em modo de desenvolvimento:
 
 ```bash
 npm run dev
+```
 
 Gere o build para produção:
 
 ```bash
 npm run build
+```
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 Desenvolvido por Jeferson Carrareto.
 ````
