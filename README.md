@@ -57,10 +57,9 @@ Busquei aplicar boas práticas de desenvolvimento, componentização, gestão de
 
 Clone o repositório:
 
-````bash
+```bash
 git clone https://github.com/appcarrareto/filmesmax.git
 ```
-
 
 Instale as dependências:
 
@@ -81,5 +80,5 @@ npm run build
 ```
 
 ## 👨‍💻 Autor
+
 Desenvolvido por Jeferson Carrareto.
-````
