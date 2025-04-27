@@ -1,0 +1,335 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: auto;
+  overflow: visible;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none;
+}
+
+body {
+  background-color: var(--background-color-primary);
+  color: var(--text-color-primary);
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  height: 100%;
+  margin: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+@supports (height: 1lh) {
+  p:empty {
+    height: 1lh;
+  }
+}
+@supports not (height: 1lh) {
+  p:empty::after {
+    content: '\00A0';
+  }
+}
+
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='search']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--background-color-primary);
+  align-items: center;
+  justify-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  align-items: start;
+  justify-items: center;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+.vue-notification-group {
+  z-index: 99999 !important;
+}
+.notifications {
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1rem;
+  width: max-content;
+  margin: 4rem auto;
+  cursor: pointer;
+}
+.notifications.warn {
+  background-color: var(--warn-color);
+  color: #000;
+}
+.notifications.error {
+  background-color: var(--danger-color);
+}
+.notifications.success {
+  background-color: var(--success-color);
+}
+
+.dialog {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+  padding: 1.5rem;
+}
+
+.dialog p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color-primary);
+}
+
+.modal-container {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 12px;
+  padding: 1.5rem;
+}
+
+.modal-container.padding {
+  padding-bottom: 1.5rem;
+}
+
+.modal-title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color-primary);
+}
+
+.modal-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+
+.modal-button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.modal-button.dialog {
+  padding: 0;
+}
+
+.modal-button.margin {
+  margin-top: 1rem;
+}
+
+.divider-input {
+  display: flex;
+  gap: 0.8rem;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 100%;
+    align-items: start;
+    gap: 1.5rem;
+  }
+}
+
+@keyframes spinner-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
