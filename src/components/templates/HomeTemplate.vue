@@ -8,10 +8,9 @@ import IconFilter from '@/components/icons/IconFilter.vue'
 import IconClose from '@/components/icons/IconClose.vue'
 import IconMovie from '@/components/icons/IconMovie.vue'
 
+import MovieForm from '@/components/forms/MovieForm.vue'
 import InputSearch from '@/components/inputs/InputSearch.vue'
-import InputText from '@/components/inputs/InputText.vue'
 import InputSelect from '@/components/inputs/InputSelect.vue'
-import InputTextarea from '@/components/inputs/InputTextarea.vue'
 import ButtonFixed from '@/components/buttons/ButtonFixed.vue'
 import ButtonMain from '@/components/buttons/ButtonMain.vue'
 import ButtonIcon from '@/components/buttons/ButtonIcon.vue'
@@ -273,25 +272,7 @@ const submitEdit = (values: Movie) => {
           </div>
         </div>
 
-        <InputText name="title" type="text" label="Título" />
-
-        <div class="divider-input">
-          <InputText name="coverUrl" type="text" label="Link da capa" />
-          <InputText name="trailerUrl" type="text" label="Link do trailer" />
-        </div>
-
-        <div class="divider-input">
-          <InputText name="director" type="text" label="Diretor" />
-          <InputText name="year" type="number" label="Ano" />
-        </div>
-
-        <InputSelect name="genre" label="Gênero" placeholder="Selecione um gênero">
-          <option v-for="genre in genreData" :key="genre.value" :value="genre.value">
-            {{ genre.label }}
-          </option>
-        </InputSelect>
-
-        <InputTextarea name="description" label="Descrição" />
+        <MovieForm />
 
         <div class="modal-button">
           <ButtonMain @click="showModalNew = false" title="Cancelar" type="secondary min" />
@@ -326,25 +307,7 @@ const submitEdit = (values: Movie) => {
           </div>
         </div>
 
-        <InputText name="title" type="text" label="Título" />
-
-        <div class="divider-input">
-          <InputText name="coverUrl" type="text" label="Link da capa" />
-          <InputText name="trailerUrl" type="text" label="Link do trailer" />
-        </div>
-
-        <div class="divider-input">
-          <InputText name="director" type="text" label="Diretor" />
-          <InputText name="year" type="number" label="Ano" />
-        </div>
-
-        <InputSelect name="genre" label="Gênero" placeholder="Selecione um gênero">
-          <option v-for="genre in genreData" :key="genre.value" :value="genre.value">
-            {{ genre.label }}
-          </option>
-        </InputSelect>
-
-        <InputTextarea name="description" label="Descrição" />
+        <MovieForm />
 
         <div class="modal-button">
           <ButtonMain @click="showModalEdit = false" title="Cancelar" type="secondary min" />
