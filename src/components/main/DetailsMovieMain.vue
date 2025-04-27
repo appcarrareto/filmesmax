@@ -2,8 +2,6 @@
 import type { Movie } from '@/interfaces/Movie'
 import type { PropType } from 'vue'
 
-import { defineProps } from 'vue'
-
 defineProps({
   movie: {
     type: Object as PropType<Movie>,

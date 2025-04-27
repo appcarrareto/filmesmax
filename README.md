@@ -51,6 +51,9 @@ Busquei aplicar boas práticas de desenvolvimento, componentização, gestão de
 10. **Tipagem com TypeScript:**  
     Utilizei **TypeScript** em toda a aplicação, garantindo segurança, facilidade de manutenção e escalabilidade do código.
 
+11. **Origem dos dados:**  
+    Para simular os dados na aplicação, utilizei arquivos .JSON como mock. No entanto, toda a estrutura foi projetada com a flexibilidade necessária para ser facilmente integrada a uma API real no futuro, garantindo escalabilidade e consistência no fluxo de dados.
+
 ---
 
 ## 🛠️ Instalação e Execução
