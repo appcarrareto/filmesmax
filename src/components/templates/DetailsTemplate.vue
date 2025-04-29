@@ -12,7 +12,7 @@ import NavigationMain from '@/components/main/NavigationMain.vue'
 import TrailerMain from '@/components/main/TrailerMain.vue'
 import DetailsMovieMain from '@/components/main/DetailsMovieMain.vue'
 
-import { ref } from 'vue'
+import { ref, onActivated } from 'vue'
 import { useRouter } from 'vue-router'
 import { useMovieStore } from '@/stores/movie'
 
@@ -34,7 +34,9 @@ const isDeleteMovie = ref<number | null>(null)
 
 const formEdit = ref<InstanceType<typeof Form>>()
 
-movieStore.showMovie(movieId)
+onActivated(() => {
+  movieStore.showMovie(movieId)
+})
 
 const handleSetRating = (rating: number) => {
   if (movieStore.getMovie) {
